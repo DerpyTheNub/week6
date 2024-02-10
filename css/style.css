@@ -1,7 +1,7 @@
 body {
     background-color: rgb(48, 48, 48);
     color: white;
-    font-family: 'Andy';
+    font-family: 'Roboto';
     align-items: center;
     justify-content: center;
     display: flex;
@@ -11,4 +11,50 @@ body {
 .container {
     color: aliceblue;
     text-align: center;
+    box-shadow: 5px;
 }
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin: 10px;
+}
+
+ul::before {
+    color: #303030;
+}
+
+h2 {
+    margin: 10px;
+}
+
+input {
+    appearance: auto;
+    background-color: rgb(201, 201, 201);
+    height: 25px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input:focus {
+    background-color: rgb(88, 88, 88);
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+button {
+    background-color: rgb(129, 204, 129);
+    border: 0;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(65, 110, 65);
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    transition: 0.3s;
+    background-color: rgb(180, 248, 180);
+};

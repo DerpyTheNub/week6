@@ -1,15 +1,26 @@
 const userInputField = document.querySelector("#textInput");
 const addBtn = document.querySelector("#addBtn");
-const listOfItems = document.querySelector("#outputList");
-let itemList = [];
+const groceryList = document.querySelector(".outputList");
+const page = document.querySelector(".page");
+let groceryListArray = [];
 
 addBtn.addEventListener("click", (event) => {
-    if (userInputField.value != "") {
-        itemList.push(userInputField.value);
+    const grocery = userInputField.value;
+
+    if (grocery != "") {
+        groceryListArray.push(grocery);
+        console.log(`Successfully added ${grocery}!`);
+    } else {
+        console.log("Input can not be empty!");
     };
 
-    const listLength = itemList.length;
-    console.log(itemList);
+    groceryList.innerHTML = "";
+
+    groceryListArray.forEach(item => {
+        const groceryListElement = document.createElement("li");
+        groceryListElement.innerText = item;
+        groceryList.appendChild(groceryListElement);
+    });
 
     userInputField.value = "";
     event.preventDefault();
